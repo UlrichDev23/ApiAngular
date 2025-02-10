@@ -1,0 +1,20 @@
+<div class="p-3">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>UserId</th>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Body</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of data">
+                <td>{{data.userId}}</td>
+                <td>{{data.id}}</td>
+                <td>{{data.title}}</td>
+                <td>{{data.body}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
