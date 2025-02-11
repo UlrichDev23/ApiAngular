@@ -1,20 +1,17 @@
-<div class="p-3">
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>UserId</th>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Body</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let data of data">
-                <td>{{data.userId}}</td>
-                <td>{{data.id}}</td>
-                <td>{{data.title}}</td>
-                <td>{{data.body}}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let item of data">
+        <div class="card" style="width: 18rem;">
+          <!--<img src="favicon.ico" width="2px" class="card-img-top" alt="Image">-->
+          <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-text">{{ item.body }}</p>
+            <p><strong>UserId:</strong> {{ item.userId }}</p>
+            <p><strong>Id:</strong> {{ item.id }}</p>
+            <a [routerLink]="['/posts', item.id]" class="btn btn-primary">Détails</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

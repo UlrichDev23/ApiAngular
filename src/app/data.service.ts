@@ -14,4 +14,8 @@ export class DataService {
   getData(): Observable<Data[]> {
     return this.http.get<Data[]>(`${this.baseUrl}/posts`);
   }
+
+  getPostById(id:number): Observable<Data>{
+    return this.http.get<Data>(`${this.baseUrl}/posts/${id}`);
+  }
 }

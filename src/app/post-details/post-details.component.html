@@ -1,0 +1,11 @@
+<div *ngIf="posts" class="container mt-4">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ posts.title }}</h5>
+      <p class="card-text">{{ posts.body }}</p>
+      <p><strong>User ID:</strong> {{ posts.userId }}</p>
+      <p><strong>Post ID:</strong> {{ posts.id }}</p>
+      <a routerLink="/posts" class="btn btn-secondary">Retour</a>
+    </div>
+  </div>
+</div>
